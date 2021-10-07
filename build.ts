@@ -27,6 +27,7 @@ const buildByConfig = (configFile: string) => build({ configFile })
       console.log('\n')
     }
     console.timeEnd(totalTimeLabel)
+    console.log('\n')
   } catch (e) {
     console.error(e)
     process.exit(1)

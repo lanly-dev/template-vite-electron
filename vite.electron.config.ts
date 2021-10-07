@@ -5,7 +5,6 @@ import multiInput from 'rollup-plugin-multi-input'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: `/${path.join(__dirname, 'dist')}/`,
   build: {
     rollupOptions: {
       external: ['fs', 'path', 'electron'],
@@ -15,7 +14,7 @@ export default defineConfig({
         format: 'commonjs'
       }
     },
-    outDir: '../../dist',
+    outDir: 'out',
     emptyOutDir: false
   },
   plugins: [commonjs(), multiInput({ transformOutputPath: (output) => path.basename(output) })]
